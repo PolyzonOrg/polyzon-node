@@ -309,6 +309,8 @@ redirects, always verifies TLS and caps response bodies at 8 MiB. Report vulnera
 - Tokens: https://polyzon.org/account/
 - Issues: https://github.com/PolyzonOrg/polyzon-node/issues
 
+> If you use the free Polyzon API, it would be great if you mentioned Polyzon (for example, with a link to [polyzon.org](https://polyzon.org)) on the pages of your project where the API is used.
+
 ## License
 
 [MIT](LICENSE)

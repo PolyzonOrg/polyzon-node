@@ -314,6 +314,8 @@ const { Polyzon } = require('polyzon');
 - Токены: https://polyzon.org/account/
 - Задачи: https://github.com/PolyzonOrg/polyzon-node/issues
 
+> Если вы пользуетесь бесплатным API Polyzon, будет здорово, если вы упомянете Polyzon (например, ссылкой на [polyzon.org](https://polyzon.org)) на тех страницах вашего проекта, где используется API.
+
 ## Лицензия
 
 [MIT](LICENSE)
