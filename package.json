@@ -1,0 +1,58 @@
+{
+  "name": "polyzon",
+  "version": "1.0.0",
+  "description": "Official Node.js / TypeScript SDK for the Polyzon public API: search 3D models across 20+ sites",
+  "keywords": [
+    "polyzon",
+    "3d-models",
+    "3d-printing",
+    "stl",
+    "search",
+    "api",
+    "sdk"
+  ],
+  "homepage": "https://api.polyzon.org",
+  "bugs": "https://github.com/PolyzonOrg/polyzon-node/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PolyzonOrg/polyzon-node.git"
+  },
+  "license": "MIT",
+  "author": "Polyzon",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "files": [
+    "dist",
+    "CHANGELOG.md"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=20.19"
+  },
+  "scripts": {
+    "build": "node -e \"require('node:fs').rmSync('dist',{recursive:true,force:true})\" && tsc -p tsconfig.json",
+    "lint": "tsc -p tsconfig.json --noEmit && eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "pretest": "npm run build",
+    "test": "node --test test/*.test.mjs",
+    "coverage": "npm run build && node --test --experimental-test-coverage --test-coverage-include=dist/** --test-coverage-lines=90 --test-coverage-branches=85 --test-coverage-functions=90 test/*.test.mjs",
+    "prepack": "npm run build"
+  },
+  "devDependencies": {
+    "@eslint/js": "10.0.1",
+    "@types/node": "24.19.2",
+    "eslint": "10.12.0",
+    "prettier": "3.9.10",
+    "typescript": "5.9.3",
+    "typescript-eslint": "8.71.1"
+  }
+}
