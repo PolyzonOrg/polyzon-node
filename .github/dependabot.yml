@@ -11,3 +11,7 @@ updates:
     groups:
       dev-dependencies:
         dependency-type: development
+    ignore:
+      # typescript-eslint 8 supports typescript <6.1.0; lift once it supports TypeScript 7.
+      - dependency-name: typescript
+        versions: [">=6.1.0"]
